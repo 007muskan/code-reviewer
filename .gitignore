@@ -1,1 +1,36 @@
-.env*
+# Node
+node_modules/
+.env
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/**/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Frontend build (Vite or CRA)
+frontend/dist/
+frontend/build/
+
+# Optional: if frontend has its own node_modules
+frontend/node_modules/
+
+# Optional: test coverage
+coverage/
+
+# Optional: local dev stuff
+*.local
+*.swp
+
+# Output
+*.tsbuildinfo
