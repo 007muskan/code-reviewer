@@ -22,9 +22,11 @@ app.use(express.json());
 app.use("/ai", aiRoutes);
 
 // Serve frontend in production
-const __dirname1 = path.resolve();
+const __dirname1 = path.resolve(__dirname, "../.."); // go from src → backend → code-review
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "/frontend/dist"))); // for Vite build
+  app.use(express.static(path.join(__dirname1, "frontend", "dist")));
+
   app.get("*", (req, res) =>
     res.sendFile(path.join(__dirname1, "frontend", "dist", "index.html"))
   );
