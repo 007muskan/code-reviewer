@@ -1,10 +1,10 @@
 {
   "name": "code-review",
   "version": "1.0.0",
-  "main": "server.js",
   "scripts": {
-    "build": "npm install --legacy-peer-deps --prefix frontend --include=dev && npm run build --prefix frontend",
-    "start": "npm install --prefix backend && npm run start --prefix backend"
+    "preinstall": "npm install --legacy-peer-deps --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "node backend/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
