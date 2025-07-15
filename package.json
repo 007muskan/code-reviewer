@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm install --legacy-peer-deps --prefix frontend --include=dev && npm run build --prefix frontend",
-    "start": "npm install --prefix backend && npm run start --prefix backend"
+    "start": "npm install --prefix backend && node backend/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
